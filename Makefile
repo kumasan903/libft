@@ -1,5 +1,5 @@
 NAME	= a.out
-SRCS	= main.c ft_strlen.c
+SRCS	= main.c ft_strlen.c ft_memcpy.c
 OBJS	= $(SRCS:.c=.o)
 CC		= gcc
 CFLAG	= -Wall -Wextra -Werror
