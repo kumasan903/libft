@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
+/*   Updated: 2023/01/09 05:32:33 by skawanis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "mylib.h"
 
 #define STRLEN "string"
@@ -7,8 +19,8 @@
 #include <stdio.h>
 int	main(void)
 {
-	char *memcpy_dest;
-	char strlcpy_dest[100];
+	char	*memcpy_dest;
+	char	strlcpy_dest[100];
 
 	puts("== ft_strlen ==");
 	printf("%d\n", ft_strlen(STRLEN));
