@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/10 12:11:21 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/10 12:29:55 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 #define TOLOWER_SRC 'A'
 #define STRCHR_STR "sabakan"
 #define STRCHR_CHR 'a'
+#define STRNCMP_A "sabakan"
+#define STRNCMP_B "sabamisoni"
 
 #include <stdio.h>
 int	main(void)
@@ -71,4 +73,6 @@ int	main(void)
 	printf("%s\n", (char *)ft_strchr(STRCHR_STR, STRCHR_CHR));
 	puts("== ft_strrchr ==");
 	printf("%s\n", (char *)ft_strrchr(STRCHR_STR, STRCHR_CHR));
+	puts("== ft_strncmp ==");
+	printf("%d\n", ft_strncmp(STRNCMP_A, STRNCMP_B, 7));
 }
