@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/10 11:32:19 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/10 11:50:53 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 #define ISASCII_SRC 0x10
 #define ISPRINT_SRC 'F'
 #define STRLCAT_SRC "tabetai"
+#define TOUPPER_SRC 'a'
+#define TOLOWER_SRC 'A'
 
 #include <stdio.h>
 int	main(void)
@@ -59,4 +61,8 @@ int	main(void)
 	puts("== ft_strlcat ==");
 	printf("return = %d\n", (int)ft_strlcat(strlcat_dest, STRLCAT_SRC, 10));
 	printf("%s\n", strlcat_dest);
+	puts("== ft_toupper ==");
+	printf("%c\n", (char)ft_toupper(TOUPPER_SRC));
+	puts("== ft_tolower ==");
+	printf("%c\n", (char)ft_tolower(TOLOWER_SRC));
 }
