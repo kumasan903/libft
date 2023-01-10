@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/10 11:59:24 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/10 12:11:21 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 #define TOUPPER_SRC 'a'
 #define TOLOWER_SRC 'A'
 #define STRCHR_STR "sabakan"
-#define STRCHR_CHR 'b'
+#define STRCHR_CHR 'a'
 
 #include <stdio.h>
 int	main(void)
@@ -69,4 +69,6 @@ int	main(void)
 	printf("%c\n", (char)ft_tolower(TOLOWER_SRC));
 	puts("== ft_strchr ==");
 	printf("%s\n", (char *)ft_strchr(STRCHR_STR, STRCHR_CHR));
+	puts("== ft_strrchr ==");
+	printf("%s\n", (char *)ft_strrchr(STRCHR_STR, STRCHR_CHR));
 }
