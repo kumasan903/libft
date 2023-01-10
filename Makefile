@@ -1,22 +1,30 @@
-NAME	= a.out
-SRCS	= main.c ft_strlen.c ft_memcpy.c ft_strlcpy.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c
+NAME	= libft.a
+SRCS	= ft_strlen.c ft_memcpy.c ft_strlcpy.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_memset.c
 OBJS	= $(SRCS:.c=.o)
 CC		= gcc
-CFLAG	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror
 
 $(NAME)	:	$(OBJS)
-	$(CC) $(OBJS) $(CFLAGS) -o $(NAME)
+	ar rc $(NAME) $(OBJS)
+	ranlib $(NAME)
 
 clean	:
 	$(RM) $(OBJS)
+	$(RM) main.o
 
 fclean	:	clean
 	$(RM) $(NAME)
+	$(RM) a.out
 
 re		:	fclean all
 
 all		:	$(NAME)
 
-run		:	$(NAME)
-	./$(NAME)
-rerun	:	re run
+test	:	$(OBJS) main.o
+	$(CC) $(CFLAGS) $(OBJS) main.o -o a.out
+
+run		:	test
+	./a.out
+	$(RM) $(OBJS)
+	$(RM) $(NAME)
+	$(RM) main.o a.out

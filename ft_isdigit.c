@@ -6,11 +6,11 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 09:26:20 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/09 09:37:08 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/10 05:32:10 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mylib.h"
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 09:26:20 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/09 09:39:42 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/10 05:31:45 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mylib.h"
+#include "libft.h"
 
 static int	ft_isupper(int c)
 {

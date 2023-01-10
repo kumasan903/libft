@@ -6,11 +6,11 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 09:25:31 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/09 05:27:04 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/10 05:33:55 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mylib.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

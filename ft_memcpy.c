@@ -6,16 +6,16 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 09:25:19 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/09 05:25:55 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/10 06:06:00 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mylib.h"
+#include "libft.h"
 
 // TODO　多分destとかsrcがNULLだったときにセグフォするからそのエラー処理。
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

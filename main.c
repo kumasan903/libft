@@ -6,11 +6,11 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/10 03:09:19 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/10 06:49:47 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mylib.h"
+#include "libft.h"
 
 #define STRLEN "string"
 #define MEMCPY_SRC "sabakan"
@@ -26,13 +26,14 @@ int	main(void)
 {
 	char	*memcpy_dest;
 	char	strlcpy_dest[100];
+	char	memset_dest[10] = "1234567890";
 
 	puts("== ft_strlen ==");
-	printf("%d\n", ft_strlen(STRLEN));
+	printf("%d\n", (int)ft_strlen(STRLEN));
 	puts("== ft_memcpy ==");
-	printf("%s\n", ft_memcpy(&memcpy_dest, MEMCPY_SRC, ft_strlen(MEMCPY_SRC)));
+	printf("%s\n", (char *)ft_memcpy(&memcpy_dest, MEMCPY_SRC, ft_strlen(MEMCPY_SRC)));
 	puts("== ft_strlcpy ==");
-	printf("return\t= %d\n", ft_strlcpy(strlcpy_dest, STRLCPY_SRC, 3));
+	printf("return\t= %d\n", (int)ft_strlcpy(strlcpy_dest, STRLCPY_SRC, 3));
 	printf("dest\t= %s\n", strlcpy_dest);
 	puts("== ft_isalpha ==");
 	printf("%d\n", ft_isalpha(ISALPHA_SRC));
@@ -44,4 +45,6 @@ int	main(void)
 	printf("%d\n", ft_isascii(ISASCII_SRC));
 	puts("== ft_isprint ==");
 	printf("%d\n", ft_isprint(ISPRINT_SRC));
+	puts("== [WIP]ft_memset ==");
+	printf("%s\n", (char *)ft_memset(memset_dest, 5, 3));
 }
