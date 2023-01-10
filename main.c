@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/10 06:49:47 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/10 07:01:32 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ int	main(void)
 	printf("%d\n", ft_isascii(ISASCII_SRC));
 	puts("== ft_isprint ==");
 	printf("%d\n", ft_isprint(ISPRINT_SRC));
-	puts("== [WIP]ft_memset ==");
-	printf("%s\n", (char *)ft_memset(memset_dest, 5, 3));
+	puts("== ft_memset ==");
+	printf("%s\n", (char *)ft_memset(memset_dest, '5', 3));
 }
