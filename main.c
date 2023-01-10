@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/10 08:03:04 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/10 11:32:19 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #define ISALNUM_SRC 'b'
 #define ISASCII_SRC 0x10
 #define ISPRINT_SRC 'F'
+#define STRLCAT_SRC "tabetai"
 
 #include <stdio.h>
 int	main(void)
@@ -29,6 +30,7 @@ int	main(void)
 	char	memset_dest[10] = "1234567890";
 	char	bzero_dest[10] = "1234567890";
 	char	memmove_dest[10] = "1234567890";
+	char	strlcat_dest[] = "sabakan";
 
 	puts("== ft_strlen ==");
 	printf("%d\n", (int)ft_strlen(STRLEN));
@@ -54,4 +56,7 @@ int	main(void)
 	printf("%s\n", bzero_dest);
 	puts("== ft_memmove ==");
 	printf("%s\n", (char *)ft_memmove(&memmove_dest + 3, &memmove_dest, 5));
+	puts("== ft_strlcat ==");
+	printf("return = %d\n", (int)ft_strlcat(strlcat_dest, STRLCAT_SRC, 10));
+	printf("%s\n", strlcat_dest);
 }
