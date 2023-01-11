@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/10 12:29:55 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/11 04:51:00 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@
 #define STRCHR_CHR 'a'
 #define STRNCMP_A "sabakan"
 #define STRNCMP_B "sabamisoni"
+#define MEMCMP_A "sabakan"
+#define MEMCMP_B "sabamisoni"
+#define MEMCHR_STR "sabakan"
+#define MEMCHR_CHR 'a'
 
 #include <stdio.h>
 int	main(void)
@@ -75,4 +79,8 @@ int	main(void)
 	printf("%s\n", (char *)ft_strrchr(STRCHR_STR, STRCHR_CHR));
 	puts("== ft_strncmp ==");
 	printf("%d\n", ft_strncmp(STRNCMP_A, STRNCMP_B, 7));
+	puts("== ft_memcmp ==");
+	printf("%d\n", ft_memcmp(MEMCMP_A, MEMCMP_B, 7));
+	puts("== ft_memchr ==");
+	printf("%s\n", (char *)ft_memchr(MEMCHR_STR, MEMCHR_CHR, 7));
 }
