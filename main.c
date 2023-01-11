@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/11 04:51:00 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/11 06:08:58 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@
 #define MEMCMP_B "sabamisoni"
 #define MEMCHR_STR "sabakan"
 #define MEMCHR_CHR 'a'
+#define STRNSTR_FIND "miso"
 
 #include <stdio.h>
 int	main(void)
@@ -41,6 +42,7 @@ int	main(void)
 	char	bzero_dest[10] = "1234567890";
 	char	memmove_dest[10] = "1234567890";
 	char	strlcat_dest[] = "sabakan";
+	char	strnstr_src[] = "sabanomisoni";
 
 	puts("== ft_strlen ==");
 	printf("%d\n", (int)ft_strlen(STRLEN));
@@ -83,4 +85,6 @@ int	main(void)
 	printf("%d\n", ft_memcmp(MEMCMP_A, MEMCMP_B, 7));
 	puts("== ft_memchr ==");
 	printf("%s\n", (char *)ft_memchr(MEMCHR_STR, MEMCHR_CHR, 7));
+	puts("== ft_strnstr ==");
+	printf("%p\n", ft_strnstr(strnstr_src, STRNSTR_FIND, ft_strlen(strnstr_src)));
 }
