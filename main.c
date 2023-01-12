@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/11 06:08:58 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/12 13:39:51 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,10 @@
 #define MEMCHR_STR "sabakan"
 #define MEMCHR_CHR 'a'
 #define STRNSTR_FIND "miso"
+#define ATOI_SRC " 	-42"
 
 #include <stdio.h>
+#include <stdlib.h>
 int	main(void)
 {
 	char	*memcpy_dest;
@@ -87,4 +89,6 @@ int	main(void)
 	printf("%s\n", (char *)ft_memchr(MEMCHR_STR, MEMCHR_CHR, 7));
 	puts("== ft_strnstr ==");
 	printf("%p\n", ft_strnstr(strnstr_src, STRNSTR_FIND, ft_strlen(strnstr_src)));
+	puts("== ft_atoi ==");
+	printf("%d\n", ft_atoi(ATOI_SRC));
 }
