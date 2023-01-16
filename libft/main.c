@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/12 14:17:39 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/16 09:41:56 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 #define TOUPPER_SRC 'a'
 #define TOLOWER_SRC 'A'
 #define STRCHR_STR "sabakan"
-#define STRCHR_CHR 'a'
+#define STRCHR_CHR '\0'
 #define STRNCMP_A "sabakan"
 #define STRNCMP_B "sabamisoni"
 #define MEMCMP_A "sabakan"
@@ -36,6 +36,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 int	main(void)
 {
 	char	*memcpy_dest;
