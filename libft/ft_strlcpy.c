@@ -6,24 +6,24 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:31:41 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/10 05:33:32 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/13 15:28:27 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	const size_t	srclen = ft_strlen(src);
 
-	if (srclen < size)
+	if (srclen < dstsize)
 	{
-		ft_memcpy(dest, src, srclen + 1);
+		ft_memcpy(dst, src, srclen + 1);
 	}
-	else if (size != 0)
+	else if (dstsize != 0)
 	{
-		ft_memcpy(dest, src, size - 1);
-		dest[size - 1] = '\0';
+		ft_memcpy(dst, src, dstsize - 1);
+		dst[dstsize - 1] = '\0';
 	}
 	return (ft_strlen(src));
 }

@@ -6,28 +6,28 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 11:35:36 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/10 11:35:39 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/13 15:22:45 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int	i;
 
-	if (dest <= src)
+	if (dst <= src)
 	{
-		return (ft_memcpy(dest, src, n));
+		return (ft_memcpy(dst, src, len));
 	}
 	else
 	{
-		i = n;
+		i = len;
 		while (i >= 0)
 		{
-			*((unsigned char *)dest + i) = *((unsigned char *)src + i);
+			*((unsigned char *)dst + i) = *((unsigned char *)src + i);
 			i--;
 		}
-		return (dest);
+		return (dst);
 	}
 }
