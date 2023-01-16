@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/12 13:39:51 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/12 14:17:39 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,7 @@ int	main(void)
 	printf("%p\n", ft_strnstr(strnstr_src, STRNSTR_FIND, ft_strlen(strnstr_src)));
 	puts("== ft_atoi ==");
 	printf("%d\n", ft_atoi(ATOI_SRC));
+	puts("== ft_calloc ==");
+	int	*ptr = (int *)ft_calloc(5, sizeof(int));
+	printf("%d\n", *ptr);
 }
