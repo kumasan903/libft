@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/16 09:41:56 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/17 17:39:10 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 #define TOUPPER_SRC 'a'
 #define TOLOWER_SRC 'A'
 #define STRCHR_STR "sabakan"
-#define STRCHR_CHR '\0'
+#define STRCHR_CHR 's'
 #define STRNCMP_A "sabakan"
 #define STRNCMP_B "sabamisoni"
 #define MEMCMP_A "sabakan"
@@ -95,4 +95,6 @@ int	main(void)
 	puts("== ft_calloc ==");
 	int	*ptr = (int *)ft_calloc(5, sizeof(int));
 	printf("%d\n", *ptr);
+	puts("== ft_strtrim ==");
+	printf("\"%s\"\n", ft_strtrim("hello world", "hello"));
 }

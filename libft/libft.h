@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:52 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/16 08:45:26 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/17 17:35:26 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,4 @@ void	*ft_memchr(const void *buf, int ch, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t number, size_t size);
+char	*ft_strtrim(char const *s1, char const *set);
