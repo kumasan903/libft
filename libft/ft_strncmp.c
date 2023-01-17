@@ -6,13 +6,13 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 23:48:19 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/10 12:29:17 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/17 17:46:34 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
