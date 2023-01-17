@@ -1,0 +1,593 @@
+[test 3] ASSERT_EQ_I failed: ("10") is not equal to expected ("5"). func main at file srcs/test_ft_strlcat.c, line 21
+[test 5] ASSERT_EQ_I failed: ("15") is not equal to expected ("10"). func main at file srcs/test_ft_strlcat.c, line 23
+[test 18] ASSERT_EQ_STR failed: "0x0" is not equal to expected "0x10a4a5b54"func main at file srcs/test_ft_strchr.c, line 35
+[test 19] ASSERT_EQ_STR failed: "0x0" is not equal to expected "0x10a4a5b55"func main at file srcs/test_ft_strchr.c, line 36
+[test 20] ASSERT_EQ_STR failed: "0x0" is not equal to expected "0x10a4a5b54"func main at file srcs/test_ft_strchr.c, line 37
+[test 21] ASSERT_EQ_STR failed: "0x0" is not equal to expected "0x10a4a5b55"func main at file srcs/test_ft_strchr.c, line 38
+[test 17] ASSERT_EQ_STR failed: "0x0" is not equal to expected "0x10303fb64"func main at file srcs/test_ft_strrchr.c, line 34
+[test 18] ASSERT_EQ_STR failed: "0x0" is not equal to expected "0x10303fb54"func main at file srcs/test_ft_strrchr.c, line 35
+[test 19] ASSERT_EQ_STR failed: "0x0" is not equal to expected "0x10303fb55"func main at file srcs/test_ft_strrchr.c, line 36
+[test 20] ASSERT_EQ_STR failed: "0x0" is not equal to expected "0x10303fb54"func main at file srcs/test_ft_strrchr.c, line 37
+[test 21] ASSERT_EQ_STR failed: "0x0" is not equal to expected "0x10303fb55"func main at file srcs/test_ft_strrchr.c, line 38
+[test 52] ASSERT_EQ_I failed: ("173") is not equal to expected ("-83"). func main at file srcs/test_ft_strncmp.c, line 34
+[test 53] ASSERT_EQ_I failed: ("87") is not equal to expected ("-169"). func main at file srcs/test_ft_strncmp.c, line 36
+[test 18] ASSERT_EQ_PTR failed: ("0x0") is not equal to expected ("0x7fabb8400640"). func main at file srcs/test_ft_memchr.c, line 40
+[test 19] ASSERT_EQ_PTR failed: ("0x0") is not equal to expected ("0x7fabb8400641"). func main at file srcs/test_ft_memchr.c, line 41
+[test 20] ASSERT_EQ_PTR failed: ("0x0") is not equal to expected ("0x7fabb8400640"). func main at file srcs/test_ft_memchr.c, line 42
+[test 21] ASSERT_EQ_PTR failed: ("0x0") is not equal to expected ("0x7fabb8400641"). func main at file srcs/test_ft_memchr.c, line 43
+[test 17] ASSERT_EQ_I failed: ("-1") is not equal to expected ("2147483647"). func main at file srcs/test_ft_atoi.c, line 33
+[test 18] ASSERT_EQ_I failed: ("0") is not equal to expected ("-2147483648"). func main at file srcs/test_ft_atoi.c, line 34
+[test 24] ASSERT_EQ_I failed: ("-2147483648") is not equal to expected ("0"). func main at file srcs/test_ft_atoi.c, line 41
+[test 25] ASSERT_EQ_I failed: ("2147483647") is not equal to expected ("-1"). func main at file srcs/test_ft_atoi.c, line 42
+[test 27] ASSERT_EQ_I failed: ("-1") is not equal to expected ("0"). func main at file srcs/test_ft_atoi.c, line 44
+[test 28] ASSERT_EQ_I failed: ("0") is not equal to expected ("-1"). func main at file srcs/test_ft_atoi.c, line 45
+[test 29] ASSERT_EQ_I failed: ("-1") is not equal to expected ("0"). func main at file srcs/test_ft_atoi.c, line 46
+[test 30] ASSERT_EQ_I failed: ("-1") is not equal to expected ("0"). func main at file srcs/test_ft_atoi.c, line 47
+[test 31] ASSERT_EQ_I failed: ("2147483646") is not equal to expected ("-2"). func main at file srcs/test_ft_atoi.c, line 49
+[test 32] ASSERT_EQ_I failed: ("-2147483647") is not equal to expected ("1"). func main at file srcs/test_ft_atoi.c, line 50
+[test 36] ASSERT_EQ_I failed: ("-1") is not equal to expected ("-2"). func main at file srcs/test_ft_atoi.c, line 54
+[test 37] ASSERT_EQ_I failed: ("-1") is not equal to expected ("-2"). func main at file srcs/test_ft_atoi.c, line 55
+[test 15] ASSERT_EQ_MALLOC_SIZE failed: "0x7fe3d4402940" is not equal to expected "0x0"func check_calloc at file srcs/test_ft_calloc.c, line 19
+[test 16] ASSERT_EQ_MEM failed: "0x7fe3d4402940" is not equal to expected "0x0"func check_calloc at file srcs/test_ft_calloc.c, line 20
+srcs/test_ft_strdup.c:17:17: error: implicit declaration of function 'ft_strdup' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        void    *actual = ft_strdup(str);
+                          ^
+srcs/test_ft_strdup.c:17:8: error: incompatible integer to pointer conversion initializing 'void *' with an expression of type 'int' [-Werror,-Wint-conversion]
+        void    *actual = ft_strdup(str);
+                 ^        ~~~~~~~~~~~~~~
+2 errors generated.
+srcs/test_ft_substr.c:18:24: error: implicit declaration of function 'ft_substr' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        /* 1 */ ASSERT_EQ_STR(ft_substr(s, 0, 100), s);
+                              ^
+srcs/test_ft_substr.c:18:24: note: did you mean 'ft_strnstr'?
+../libft/libft.h:35:7: note: 'ft_strnstr' declared here
+char    *ft_strnstr(const char *big, const char *little, size_t len);
+         ^
+srcs/test_ft_substr.c:18:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 1 */ ASSERT_EQ_STR(ft_substr(s, 0, 100), s);
+                              ^~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:19:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 3 */ ASSERT_EQ_STR(ft_substr(s, 5, 100), s + 5);
+                              ^~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:20:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 3 */ ASSERT_EQ_STR(ft_substr(s, 10, 100), s + 10);
+                              ^~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:21:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 4 */ ASSERT_EQ_STR(ft_substr(s, 15, 100), s + 15);
+                              ^~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:22:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 5 */ ASSERT_EQ_STR(ft_substr(s, 20, 100), "");
+                              ^~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:23:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 6 */ ASSERT_EQ_STR(ft_substr(s, 0, 5), "libft");
+                              ^~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:24:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 7 */ ASSERT_EQ_STR(ft_substr(s, 5, 5), "-test");
+                              ^~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:25:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 8 */ ASSERT_EQ_STR(ft_substr(s, 10, 5), "-toky");
+                              ^~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:26:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 9 */ ASSERT_EQ_STR(ft_substr(s, 15, 5), "o");
+                              ^~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:27:25: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 10 */ ASSERT_EQ_STR(ft_substr(s, 20, 5), "");
+                               ^~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:28:25: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 11 */ ASSERT_EQ_STR(ft_substr(s, 0, 0), "");
+                               ^~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:29:25: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 12 */ ASSERT_EQ_STR(ft_substr(s, 5, 0), "");
+                               ^~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:30:25: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 13 */ ASSERT_EQ_STR(ft_substr(s, 10, 0), "");
+                               ^~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:31:25: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 14 */ ASSERT_EQ_STR(ft_substr(s, 15, 0), "");
+                               ^~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_substr.c:32:25: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 15 */ ASSERT_EQ_STR(ft_substr(s, 20, 0), "");
+                               ^~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+16 errors generated.
+srcs/test_ft_strjoin.c:17:24: error: implicit declaration of function 'ft_strjoin' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        /* 1 */ ASSERT_EQ_STR(ft_strjoin("hello", "world"), "helloworld");
+                              ^
+srcs/test_ft_strjoin.c:17:24: note: did you mean 'ft_strlen'?
+../libft/libft.h:16:8: note: 'ft_strlen' declared here
+size_t  ft_strlen(const char *s);
+        ^
+srcs/test_ft_strjoin.c:17:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 1 */ ASSERT_EQ_STR(ft_strjoin("hello", "world"), "helloworld");
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strjoin.c:18:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 2 */ ASSERT_EQ_STR(ft_strjoin("", "world"), "world");
+                              ^~~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strjoin.c:19:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 3 */ ASSERT_EQ_STR(ft_strjoin("hello", ""), "hello");
+                              ^~~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strjoin.c:20:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 4 */ ASSERT_EQ_STR(ft_strjoin("", ""), "");
+                              ^~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+5 errors generated.
+srcs/test_ft_strtrim.c:17:24: error: implicit declaration of function 'ft_strtrim' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        /* 1 */ ASSERT_EQ_STR(ft_strtrim("hello world", "world"), "hello ");
+                              ^
+srcs/test_ft_strtrim.c:17:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 1 */ ASSERT_EQ_STR(ft_strtrim("hello world", "world"), "hello ");
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strtrim.c:18:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 2 */ ASSERT_EQ_STR(ft_strtrim("hello world", "hello"), " world");
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strtrim.c:19:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 3 */ ASSERT_EQ_STR(ft_strtrim("hello world", ""), "hello world");
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strtrim.c:20:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 4 */ ASSERT_EQ_STR(ft_strtrim("", ""), "");
+                              ^~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strtrim.c:21:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 5 */ ASSERT_EQ_STR(ft_strtrim("    hello world     ", " "), "hello world");
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strtrim.c:22:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 6 */ ASSERT_EQ_STR(ft_strtrim(" \n\t\r    hello \n\t\r world     \r\t\n\t \r\n", " \n\t\r"), "hello \n\t\r world");
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strtrim.c:23:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 7 */ ASSERT_EQ_STR(ft_strtrim("hello world", "abcdefghijklmnopqrstuvwxyz"), " ");
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+8 errors generated.
+srcs/test_ft_split.c:27:31: error: implicit declaration of function 'ft_split' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        /* 1 ~ 5 */ assert_str_array(ft_split("hello,world,42,tokyo", ','), expected);
+                                     ^
+srcs/test_ft_split.c:27:31: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char **' [-Werror,-Wint-conversion]
+        /* 1 ~ 5 */ assert_str_array(ft_split("hello,world,42,tokyo", ','), expected);
+                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+srcs/test_ft_split.c:15:30: note: passing argument to parameter 'actual' here
+void    assert_str_array(char **actual, char **expected)
+                                ^
+srcs/test_ft_split.c:28:32: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char **' [-Werror,-Wint-conversion]
+        /* 6 ~ 10 */ assert_str_array(ft_split("hello world 42 tokyo", ' '), expected);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+srcs/test_ft_split.c:15:30: note: passing argument to parameter 'actual' here
+void    assert_str_array(char **actual, char **expected)
+                                ^
+srcs/test_ft_split.c:29:33: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char **' [-Werror,-Wint-conversion]
+        /* 11 ~ 15 */ assert_str_array(ft_split(",,,hello,,,world,,,42,,,tokyo,,,,", ','), expected);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+srcs/test_ft_split.c:15:30: note: passing argument to parameter 'actual' here
+void    assert_str_array(char **actual, char **expected)
+                                ^
+srcs/test_ft_split.c:32:33: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char **' [-Werror,-Wint-conversion]
+        /* 16 ~ 17 */ assert_str_array(ft_split("hello,world,42,tokyo", ' '), expected2);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+srcs/test_ft_split.c:15:30: note: passing argument to parameter 'actual' here
+void    assert_str_array(char **actual, char **expected)
+                                ^
+srcs/test_ft_split.c:33:33: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char **' [-Werror,-Wint-conversion]
+        /* 18 ~ 19 */ assert_str_array(ft_split("hello,world,42,tokyo", '{'), expected2);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+srcs/test_ft_split.c:15:30: note: passing argument to parameter 'actual' here
+void    assert_str_array(char **actual, char **expected)
+                                ^
+srcs/test_ft_split.c:36:28: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char **' [-Werror,-Wint-conversion]
+        /* 20 */ assert_str_array(ft_split("", ','), expected3);
+                                  ^~~~~~~~~~~~~~~~~
+srcs/test_ft_split.c:15:30: note: passing argument to parameter 'actual' here
+void    assert_str_array(char **actual, char **expected)
+                                ^
+7 errors generated.
+srcs/test_ft_itoa.c:17:24: error: implicit declaration of function 'ft_itoa' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        /* 1 */ ASSERT_EQ_STR(ft_itoa(0), "0");
+                              ^
+srcs/test_ft_itoa.c:17:24: note: did you mean 'ft_atoi'?
+../libft/libft.h:36:6: note: 'ft_atoi' declared here
+int             ft_atoi(const char *nptr);
+                ^
+srcs/test_ft_itoa.c:17:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 1 */ ASSERT_EQ_STR(ft_itoa(0), "0");
+                              ^~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:18:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 2 */ ASSERT_EQ_STR(ft_itoa(-0), "0");
+                              ^~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:19:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 3 */ ASSERT_EQ_STR(ft_itoa(+0), "0");
+                              ^~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:20:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 4 */ ASSERT_EQ_STR(ft_itoa(1),"1");
+                              ^~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:21:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 5 */ ASSERT_EQ_STR(ft_itoa(-1),"-1");
+                              ^~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:22:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 6 */ ASSERT_EQ_STR(ft_itoa(+1),"1");
+                              ^~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:23:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 7 */ ASSERT_EQ_STR(ft_itoa(7),"7");
+                              ^~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:24:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 8 */ ASSERT_EQ_STR(ft_itoa(-7),"-7");
+                              ^~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:25:24: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 9 */ ASSERT_EQ_STR(ft_itoa(+7),"7");
+                              ^~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:26:25: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 10 */ ASSERT_EQ_STR(ft_itoa(42), "42");
+                               ^~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:27:25: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 11 */ ASSERT_EQ_STR(ft_itoa(-42), "-42");
+                               ^~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:28:25: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 12 */ ASSERT_EQ_STR(ft_itoa(+42), "42");
+                               ^~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:29:34: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 13. INT_MAX */ ASSERT_EQ_STR(ft_itoa(2147483647),"2147483647");
+                                        ^~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:30:34: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 14. INT_MIN */ ASSERT_EQ_STR(ft_itoa(-2147483648),"-2147483648");
+                                        ^~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:31:38: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 15. INT_MAX - 1 */ ASSERT_EQ_STR(ft_itoa(2147483646), "2147483646");
+                                            ^~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_itoa.c:32:38: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+        /* 16. INT_MIN + 1 */ ASSERT_EQ_STR(ft_itoa(-2147483647), "-2147483647");
+                                            ^~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+17 errors generated.
+srcs/test_ft_strmapi.c:22:27: error: implicit declaration of function 'ft_strmapi' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+    /* 1 */ ASSERT_EQ_STR(ft_strmapi("abcde", F), "ABCDE");
+                          ^
+srcs/test_ft_strmapi.c:22:27: note: did you mean 'ft_strlcpy'?
+../libft/libft.h:18:8: note: 'ft_strlcpy' declared here
+size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize);
+        ^
+srcs/test_ft_strmapi.c:22:27: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+    /* 1 */ ASSERT_EQ_STR(ft_strmapi("abcde", F), "ABCDE");
+                          ^~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strmapi.c:23:27: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+    /* 2 */ ASSERT_EQ_STR(ft_strmapi("Hello World!", F), "HELLO WORLD!");
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strmapi.c:24:27: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+    /* 3 */ ASSERT_EQ_STR(ft_strmapi("12345", F), "12345");
+                          ^~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strmapi.c:26:27: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+    /* 4 */ ASSERT_EQ_STR(ft_strmapi("ABCDE", F), "abcde");
+                          ^~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strmapi.c:27:27: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+    /* 5 */ ASSERT_EQ_STR(ft_strmapi("Hello World!", F), "hello world!");
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strmapi.c:28:27: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+    /* 6 */ ASSERT_EQ_STR(ft_strmapi("12345", F), "12345");
+                          ^~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strmapi.c:30:27: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+    /* 7 */ ASSERT_EQ_STR(ft_strmapi("ABCDE", F), "BCDEF");
+                          ^~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strmapi.c:31:27: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+    /* 8 */ ASSERT_EQ_STR(ft_strmapi("Hello World!", F), "Ifmmp!Xpsme\"");
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+srcs/test_ft_strmapi.c:32:27: error: incompatible integer to pointer conversion passing 'int' to parameter of type 'char *' [-Werror,-Wint-conversion]
+    /* 9 */ ASSERT_EQ_STR(ft_strmapi("12345", F), "23456");
+                          ^~~~~~~~~~~~~~~~~~~~~~
+./includes/libassert.h:50:44: note: expanded from macro 'ASSERT_EQ_STR'
+# define ASSERT_EQ_STR(x, y) ASSERT_EQ_STR(x, y, __FILE__,__func__,__LINE__)
+                                           ^
+./includes/libassert.h:34:26: note: passing argument to parameter 'actual' here
+void    ASSERT_EQ_STR(char *actual, char *expected,
+                            ^
+10 errors generated.
+srcs/test_ft_striteri.c:31:18: error: implicit declaration of function 'ft_striteri' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+    f = toupper; ft_striteri(str, F);
+                 ^
+1 error generated.
+srcs/test_ft_putchar_fd.c:20:23: error: implicit declaration of function 'ft_putchar_fd' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+    bzero(buf, 1024); ft_putchar_fd('a', fd); lseek(fd, 0, SEEK_SET); read(fd, buf, 1);
+                      ^
+1 error generated.
+srcs/test_ft_putstr_fd.c:20:5: error: implicit declaration of function 'ft_putstr_fd' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+    ft_putstr_fd("hello", fd); lseek(fd, 0, SEEK_SET); bzero(buf, 1024); read(fd, buf, 1024);
+    ^
+1 error generated.
+srcs/test_ft_putendl_fd.c:20:5: error: implicit declaration of function 'ft_putendl_fd' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+    ft_putendl_fd("hello", fd); lseek(fd, 0, SEEK_SET); bzero(buf, 1024); read(fd, buf, 1024);
+    ^
+1 error generated.
+srcs/test_ft_putnbr_fd.c:20:5: error: implicit declaration of function 'ft_putnbr_fd' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+    ft_putnbr_fd(0, fd); lseek(fd, 0, SEEK_SET); bzero(buf, 1024); read(fd, buf, 1024);
+    ^
+1 error generated.
