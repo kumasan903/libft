@@ -6,13 +6,13 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:47:14 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/17 17:47:18 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/19 15:15:32 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_front(char const *s1, char const *set)
+static int	check_front(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
@@ -41,7 +41,7 @@ int	check_front(char const *s1, char const *set)
 	return (front);
 }
 
-int	check_back(char const *s1, char const *set)
+static int	check_back(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
