@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/17 17:39:10 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/20 09:15:55 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,4 +97,11 @@ int	main(void)
 	printf("%d\n", *ptr);
 	puts("== ft_strtrim ==");
 	printf("\"%s\"\n", ft_strtrim("hello world", "hello"));
+	puts("== ft_putchar_fd ==");
+	ft_putchar_fd('z', 1);
+	ft_putchar_fd('\n', 1);
+	puts("== ft_putstr_fd ==");
+	ft_putstr_fd("Hello, World!\n", 1);
+	puts("== ft_putendl_fd ==");
+	ft_putendl_fd("Hello, World!", 1);
 }

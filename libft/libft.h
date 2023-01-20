@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:52 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/17 17:55:37 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/20 09:07:40 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t number, size_t size);
 char	*ft_strtrim(char const *s1, char const *set);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 #endif
