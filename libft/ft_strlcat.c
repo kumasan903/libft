@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 11:21:58 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/23 05:51:54 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/23 05:55:17 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst_i++;
 	}
 	src_i = 0;
-	while (dst_i < dstsize - 1 && src[src_i])
+	while (dst_i + 1 < dstsize && src[src_i])
 	{
 		dst[dst_i] = src[src_i];
 		dst_i++;
