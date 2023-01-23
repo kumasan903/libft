@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 07:09:43 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/23 07:26:01 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/23 07:28:34 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (len == 0)
 		return (NULL);
-	if((dest = ft_calloc(len, sizeof(char))) == NULL)
+	if((dest = malloc(len, sizeof(char))) == NULL)
 		return (NULL);
 	dst_i = 0;
 	src_i = start;
