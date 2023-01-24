@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 11:56:08 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/24 16:44:40 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/24 16:46:15 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	size_t			i;
 	unsigned char	*str;
-	char			*return_value;
+	unsigned char	*return_value;
 
 	str = (unsigned char *)s;
 	i = 0;
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (str[i])
 	{
 		if (str[i] == c)
-			return_value = &s[i];
+			return_value = (unsigned char *)&s[i];
 		i++;
 	}
 	if (str[i] == c)
