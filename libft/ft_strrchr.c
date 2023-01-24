@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 11:56:08 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/24 16:38:41 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/24 16:40:38 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == c)
-			return_value = str + i;
+			return_value = &str[i];
 		i++;
 	}
 	if (return_value == 0)
