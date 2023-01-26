@@ -6,15 +6,15 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 22:08:19 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/26 22:12:43 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/26 22:26:35 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(int c)
+static int	ft_isblank(int c)
 {
-	return (c == ' ' || c == '\n' || c == '\t');
+	return (c == ' ' || ('\t' <= c && c <= '\r'));
 }
 
 void	check_head(int *sign, size_t *i, const char *str)
@@ -54,4 +54,11 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return ((int)(num * sign));
+}
+
+#include <stdlib.h>
+#include <stdio.h>
+int	main(void)
+{
+	printf("%d\n%d\n", ft_atoi(" \t"), atoi(" \t"));
 }
