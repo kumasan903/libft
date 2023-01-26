@@ -6,13 +6,13 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 22:08:19 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/26 22:26:35 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/26 22:29:15 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isblank(int c)
+static int	ft_isspace(int c)
 {
 	return (c == ' ' || ('\t' <= c && c <= '\r'));
 }
