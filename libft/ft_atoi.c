@@ -28,10 +28,12 @@ int	ft_atoi(const char *str)
 		num += str[i] - '0';
 		if (num < tmp)
 		{
-			if (sign == -1 && num - 1 == LONG_MAX)
-			{
+//			if (sign == -1 && num - 1 == LONG_MAX)
+//			{
+//				return ((int)LONG_MIN);
+//			}
+			if (sign == -1)
 				return ((int)LONG_MIN);
-			}
 			num = LONG_MAX;
 			break ;
 		}
