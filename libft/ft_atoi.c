@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 13:36:16 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/12 13:37:09 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/26 09:00:23 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	num;
-	int	i;
-	int	flag;
+	long	num;
+	size_t	i;
+	int		flag;
 
 	num = 0;
 	flag = 1;
@@ -36,5 +36,5 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	num /= 10;
-	return (flag * num);
+	return (flag * (int)num);
 }
