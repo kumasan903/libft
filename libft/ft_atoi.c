@@ -10,6 +10,7 @@ int	ft_atoi(const char *str)
 	size_t	i;
 	int		sign;
 	long	num;
+	long	tmp;
 
 	i = 0;
 	sign = 1;
@@ -24,6 +25,12 @@ int	ft_atoi(const char *str)
 	{
 		num *= 10;
 		num += str[i] - '0';
+		if (num < tmp)
+		{
+			num = LONG_MAX;
+			break ;
+		}
+		tmp = num;
 		i++;
 	}
 	return ((int)(num * sign));
