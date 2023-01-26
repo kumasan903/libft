@@ -28,7 +28,7 @@ int	ft_atoi(const char *str)
 		num += str[i] - '0';
 		if (num < tmp)
 		{
-			if (sign == -1 && num == LONG_MAX + 1)
+			if (sign == -1 && num - 1 == LONG_MAX)
 			{
 				return ((int)LONG_MIN);
 			}
