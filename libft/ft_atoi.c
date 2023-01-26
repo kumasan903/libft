@@ -1,40 +1,29 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 13:36:16 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/26 09:00:23 by skawanis         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+static int	ft_isspace(int c)
 {
-	long	num;
-	size_t	i;
-	int		flag;
+	return (c == ' ' || c == '\n' || c == '\t');
+}
 
-	num = 0;
-	flag = 1;
+int	ft_atoi(const char *str)
+{
+	size_t	i;
+	int		sign;
+	long	num;
+
 	i = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\t')
+	sign = 1;
+	num = 0;
+	while (ft_isspace(str[i]))
 		i++;
-	if (nptr[i] == '-')
-		flag *= -1;
-	if (nptr[i] == '+' || nptr[i] == '-')
+	if (str[i] == '-')
+		sign *= -1;
+	if (str[i] == '-' || str[i] == '+')
 		i++;
-	while (nptr[i])
+	while (ft_isdigit(str[i]))
 	{
-		if (nptr[i] < '0' || nptr[i] > '9')
-			break ;
-		num += nptr[i] - 48;
 		num *= 10;
-		i++;
+		num += str[i] - '0';
 	}
-	num /= 10;
-	return (flag * (int)num);
+	return ((int)num);
 }
