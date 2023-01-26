@@ -24,6 +24,7 @@ int	ft_atoi(const char *str)
 	{
 		num *= 10;
 		num += str[i] - '0';
+		i++;
 	}
 	return ((int)num);
 }
