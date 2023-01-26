@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 22:08:19 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/26 22:29:15 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/26 22:30:51 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return ((int)(num * sign));
-}
-
-#include <stdlib.h>
-#include <stdio.h>
-int	main(void)
-{
-	printf("%d\n%d\n", ft_atoi(" \t"), atoi(" \t"));
 }
