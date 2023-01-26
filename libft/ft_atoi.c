@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 22:08:19 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/26 22:43:35 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/26 22:56:46 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_isspace(int c)
 	return (c == ' ' || ('\t' <= c && c <= '\r'));
 }
 
-void	check_head(int *sign, size_t *i, const char *str)
+static void	check_head(int *sign, size_t *i, const char *str)
 {
 	while (ft_isspace(str[*i]))
 		*i += 1;
