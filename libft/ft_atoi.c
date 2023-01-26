@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 22:08:19 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/26 22:10:00 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/26 22:12:43 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ static int	ft_isspace(int c)
 void	check_head(int *sign, size_t *i, const char *str)
 {
 	while (ft_isspace(str[*i]))
-		*i++;
+		*i += 1;
 	if (str[*i] == '-')
 		*sign *= -1;
 	if (str[*i] == '-' || str[*i] == '+')
-		*i++;
+		*i += 1;
 }
 
 int	ft_atoi(const char *str)
