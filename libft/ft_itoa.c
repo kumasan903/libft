@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 07:11:28 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/28 07:20:13 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/28 07:21:42 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,4 @@ char	*ft_itoa(int n)
 	if (sign == -1)
 		str[0] = '-';
 	return (str);
-}
-
-#include <stdio.h>
-#include <limits.h>
-int	main(void)
-{
-	printf("%s\n", ft_itoa(INT_MIN));
 }
