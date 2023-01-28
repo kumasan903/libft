@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 07:11:28 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/28 07:21:42 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/01/28 07:23:04 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ char	*ft_itoa(int n)
 		n_len ++;
 	}
 	str = ft_calloc(sizeof(char), n_len + 1);
+	if (str == NULL)
+		return (NULL);
 	if (long_n == 0)
 		str[0] = '0';
 	while (long_n)
