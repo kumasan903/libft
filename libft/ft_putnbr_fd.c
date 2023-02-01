@@ -6,13 +6,13 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 07:32:21 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/28 07:32:23 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/01 07:07:10 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	ft_putstr_fd(ft_itoa(n), fd);
 }

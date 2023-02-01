@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 07:09:43 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/23 08:04:45 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/01 07:05:37 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (len == 0)
 		return ((char *)ft_calloc(1, sizeof(char)));
-	if((dest = ft_calloc(len, sizeof(char))) == NULL)
+	dest = ft_calloc(len, sozeof(char));
+	if (dest == NULL)
 		return (NULL);
-	if(ft_strlen(s) < start)
+	if (ft_strlen(s) < start)
 		return ((char *)ft_calloc(1, sizeof(char)));
 	dst_i = 0;
 	src_i = start;
-	while(dst_i < len && s[src_i])
+	while (dst_i < len && s[src_i])
 	{
 		dest[dst_i] = s[src_i];
 		dst_i++;
@@ -34,25 +35,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	dest[dst_i] = 0;
 	return (dest);
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	char *s = "libft-test-tokyo";
-	/* 1 */ printf("%s\n", ft_substr(s, 0, 100));
-	/* 3 */ printf("%s\n", ft_substr(s, 5, 100));
-	/* 3 */ printf("%s\n", ft_substr(s, 10, 100));
-	/* 4 */ printf("%s\n", ft_substr(s, 15, 100));
-	/* 5 */ printf("%s\n", ft_substr(s, 20, 100));
-	/* 6 */ printf("%s\n", ft_substr(s, 0, 5));
-	/* 7 */ printf("%s\n", ft_substr(s, 5, 5));
-	/* 8 */ printf("%s\n", ft_substr(s, 10, 5));
-	/* 9 */ printf("%s\n", ft_substr(s, 15, 5));
-	/* 10 */ printf("%s\n", ft_substr(s, 20, 5));
-	/* 11 */ printf("%p\n", ft_substr(s, 0, 0));
-	/* 12 */ printf("%p\n", ft_substr(s, 5, 0));
-	/* 13 */ printf("%p\n", ft_substr(s, 10, 0));
-	/* 14 */ printf("%p\n", ft_substr(s, 15, 0));
-	/* 15 */ printf("%p\n", ft_substr(s, 20, 0));
 }

@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 22:08:19 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/26 22:56:46 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/01 07:06:12 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	ft_atoi(const char *str)
 		{
 			if (sign == -1)
 				return ((int)LONG_MIN);
-			return((int)LONG_MAX);
+			return ((int)LONG_MAX);
 		}
 		tmp = num;
 		i++;
