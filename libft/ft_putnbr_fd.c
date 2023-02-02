@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 07:32:21 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/01 07:07:10 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/02 00:44:05 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	// longにキャストして、マイナスだったら-1かける
+	// そしてn_lenもとめて、１番上の桁から出力していく
 }
