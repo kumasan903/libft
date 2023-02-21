@@ -6,13 +6,11 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 19:48:12 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/21 20:41:52 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/21 20:47:57 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <libft.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <libft.h>
 
 static unsigned int	count_char(char const *s, char c)
 {
@@ -46,7 +44,10 @@ size_t	malloc_str(char const *s, char c, char **dest)
 	// 次の区切り文字までの文字数分のメモリを確保する
 	str = malloc(sizeof(char) * (str_len + 1));
 	if (str == NULL)
-		return (NULL);
+	{
+		*dest = NULL;
+		return (0);
+	}
 	// 次の区切り文字まで確保した文字列に収めていく
 	ft_strlcpy(str, s, str_len + 1);
 	*dest = str;
@@ -58,7 +59,7 @@ char	**ft_split(char const *s, char c)
 	unsigned int	count;
 	char 			**result;
 	unsigned int	offset;
-	int				i;
+	unsigned int	i;
 
 	// 区切り文字の数を数える
 	count = count_char(s, c);
