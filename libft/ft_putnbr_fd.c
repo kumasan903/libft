@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 07:32:21 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/21 19:19:07 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:26:56 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@ static size_t	count_num_len(unsigned int nb)
 {
 	int	count;
 
+	if (nb == 0)
+	{
+		return (1);
+	}
 	count = 0;
 	while (nb > 0)
 	{
