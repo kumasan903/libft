@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 19:48:12 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/21 22:18:28 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/21 22:31:21 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,12 @@ size_t	malloc_str(char const *s, char c, char **dest)
 		str_len++;
 		i++;
 	}
-	// 次の区切り文字までの文字数分のメモリを確保する
 	str = malloc(sizeof(char) * (str_len + 1));
 	if (str == NULL)
 	{
 		*dest = NULL;
 		return (0);
 	}
-	// 次の区切り文字まで確保した文字列に収めていく
 	ft_strlcpy(str, s, str_len + 1);
 	*dest = str;
 	return (str_len);
@@ -67,13 +65,12 @@ char	**ft_split(char const *s, char c)
 	char			*new_s;
 
 	new_s = ft_strtrim(s, &c);
-	// 区切り文字の数を数える
 	count = count_char(new_s, c);
-	// 配列用のメモリを確保する
+	if (count == 0)
+		return (ft_calloc(sizeof(char *), 1));
 	result = malloc(sizeof(char *) * (count + 2));
 	if (result == NULL)
 		return (NULL);
-	// それぞれの文字列用のメモリを確保する
 	i = 0;
 	offset = 0;
 	while (i < count + 1)
@@ -86,9 +83,3 @@ char	**ft_split(char const *s, char c)
 	result[count + 1] = NULL;
 	return (result);
 }
-/*
-void	main(void)
-{
-	ft_split("abc,def,ghi", ',');
-}
-*/
