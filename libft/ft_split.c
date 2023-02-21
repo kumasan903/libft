@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 19:48:12 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/21 21:19:28 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/21 22:18:28 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,11 @@ static unsigned int	count_char(char const *s, char c)
 	while (s[i])
 	{
 		if (s[i] == c)
+		{
 			count++;
+			while (s[i + 1] == c)
+				i++;
+		}
 		i++;
 	}
 	return (count);
@@ -60,11 +64,13 @@ char	**ft_split(char const *s, char c)
 	char			**result;
 	unsigned int	offset;
 	unsigned int	i;
+	char			*new_s;
 
+	new_s = ft_strtrim(s, &c);
 	// 区切り文字の数を数える
-	count = count_char(s, c);
+	count = count_char(new_s, c);
 	// 配列用のメモリを確保する
-	result = malloc(sizeof(char *) * (count + 3));
+	result = malloc(sizeof(char *) * (count + 2));
 	if (result == NULL)
 		return (NULL);
 	// それぞれの文字列用のメモリを確保する
@@ -72,12 +78,12 @@ char	**ft_split(char const *s, char c)
 	offset = 0;
 	while (i < count + 1)
 	{
-		offset += malloc_str(s + offset, c, &result[i]);
-		offset += 1;
+		offset += malloc_str(new_s + offset, c, &result[i]);
+		while (new_s[offset] == c)
+			offset++;
 		i++;
 	}
-	malloc_str(s, c, &result[0]);
-	result[count + 2] = NULL;
+	result[count + 1] = NULL;
 	return (result);
 }
 /*
