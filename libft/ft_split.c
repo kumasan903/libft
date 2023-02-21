@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 19:48:12 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/21 21:08:19 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/21 21:19:28 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static unsigned int	count_char(char const *s, char c)
 
 size_t	malloc_str(char const *s, char c, char **dest)
 {
-	char *str;
+	char	*str;
 	size_t	str_len;
 	size_t	i;
 
@@ -57,7 +57,7 @@ size_t	malloc_str(char const *s, char c, char **dest)
 char	**ft_split(char const *s, char c)
 {
 	unsigned int	count;
-	char 			**result;
+	char			**result;
 	unsigned int	offset;
 	unsigned int	i;
 
