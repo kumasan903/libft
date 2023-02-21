@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 19:48:12 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/21 20:49:33 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/21 21:08:19 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ char	**ft_split(char const *s, char c)
 	result = malloc(sizeof(char *) * (count + 3));
 	if (result == NULL)
 		return (NULL);
-	result[count + 2] = NULL;
 	// それぞれの文字列用のメモリを確保する
 	i = 0;
 	offset = 0;
@@ -78,6 +77,7 @@ char	**ft_split(char const *s, char c)
 		i++;
 	}
 	malloc_str(s, c, &result[0]);
+	result[count + 2] = NULL;
 	return (result);
 }
 /*
