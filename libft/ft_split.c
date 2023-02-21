@@ -1,55 +1,87 @@
-static int	count_str(char const *s, char c)
-{
-	int	i;
-	int	count;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/21 19:48:12 by skawanis          #+#    #+#             */
+/*   Updated: 2023/02/21 20:41:52 by skawanis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	count = 1;
+//#include <libft.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+static unsigned int	count_char(char const *s, char c)
+{
+	unsigned int	i;
+	unsigned int	count;
+
 	i = 0;
+	count = 0;
 	while (s[i])
 	{
-		if (s[i] == c && (s[i+1] != c && s[i+1] != '\0'))
-		{
+		if (s[i] == c)
 			count++;
-		}
 		i++;
 	}
-	if (s[0] == c)
-		s--;
 	return (count);
 }
 
-static int	count_str2(char const *s, char c)
+size_t	malloc_str(char const *s, char c, char **dest)
 {
-	int	i;
-	int	count;
+	char *str;
+	size_t	str_len;
+	size_t	i;
 
-	count = 0;
 	i = 0;
-	while(s[i])
+	str_len = 0;
+	while (s[i] && s[i] != c)
 	{
-		if (s[i] != c)
-		{
-			count ++;
-			while (s[i] != c && s[i])
-				i++;
-		}
+		str_len++;
 		i++;
 	}
-	return (count);
+	// 次の区切り文字までの文字数分のメモリを確保する
+	str = malloc(sizeof(char) * (str_len + 1));
+	if (str == NULL)
+		return (NULL);
+	// 次の区切り文字まで確保した文字列に収めていく
+	ft_strlcpy(str, s, str_len + 1);
+	*dest = str;
+	return (str_len);
 }
 
-#include <stdio.h> //for debug
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char	**ptr;
-	printf("%d\n", count_str2(s, c));
-	return (ptr);
-}
+	unsigned int	count;
+	char 			**result;
+	unsigned int	offset;
+	int				i;
 
-int	main(void)
-{
-	ft_split(",,,hello,,,world,,,42,,,tokyo,,,,", ',');
-	ft_split("hello,,,world,,,42,,,tokyo,,,,", ',');
-	ft_split(",,,hello,,,world,,,42,,,tokyo", ',');
-	ft_split("hello,,,,world", ',');
+	// 区切り文字の数を数える
+	count = count_char(s, c);
+	// 配列用のメモリを確保する
+	result = malloc(sizeof(char *) * (count + 3));
+	if (result == NULL)
+		return (NULL);
+	result[count + 2] = NULL;
+	// それぞれの文字列用のメモリを確保する
+	i = 0;
+	offset = 0;
+	while (i < count + 1)
+	{
+		offset += malloc_str(s + offset, c, &result[i]);
+		offset += 1;
+		i++;
+	}
+	malloc_str(s, c, &result[0]);
+	return (result);
 }
+/*
+void	main(void)
+{
+	ft_split("abc,def,ghi", ',');
+}
+*/
