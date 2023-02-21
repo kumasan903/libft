@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 07:32:21 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/21 19:16:19 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/21 19:19:07 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static size_t	count_num_len(unsigned int nb)
 static unsigned int	calc_divisor(size_t num_len)
 {
 	unsigned int	divisor;
-	int				i;
+	size_t			i;
 
 	divisor = 1;
 	i = 1;
@@ -44,7 +44,7 @@ static void	ft_putuint_fd(unsigned int nb, int fd)
 {
 	size_t			nb_len;
 	unsigned int	divisor;
-	int				i;
+	size_t			i;
 	char			c;
 
 	nb_len = count_num_len(nb);
