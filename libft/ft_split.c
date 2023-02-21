@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 19:48:12 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/21 22:31:21 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/21 22:44:49 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	**ft_split(char const *s, char c)
 
 	new_s = ft_strtrim(s, &c);
 	count = count_char(new_s, c);
-	if (count == 0)
+	if (s[0] == '\0')
 		return (ft_calloc(sizeof(char *), 1));
 	result = malloc(sizeof(char *) * (count + 2));
 	if (result == NULL)
