@@ -25,6 +25,6 @@ test	:	$(OBJS) main.o
 
 run		:	test
 	./a.out
-	$(RM) $(OBJS)
-	$(RM) $(NAME)
-	$(RM) main.o a.out
+	@$(RM) $(OBJS)
+	@$(RM) $(NAME)
+	@$(RM) main.o a.out
