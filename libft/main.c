@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:05 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/20 09:15:55 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/21 23:00:46 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@
 #include <string.h>
 int	main(void)
 {
+	/*
 	char	*memcpy_dest;
 	char	strlcpy_dest[100];
 	char	memset_dest[10] = "1234567890";
@@ -104,4 +105,15 @@ int	main(void)
 	ft_putstr_fd("Hello, World!\n", 1);
 	puts("== ft_putendl_fd ==");
 	ft_putendl_fd("Hello, World!", 1);
+	*/
+
+	char **str;
+
+	str = ft_split(",,,,,", ',');
+	printf("%p\n", str[0]);
+	printf("%p\n", str[1]);
+	printf("%p\n", str[2]);
+	printf("%s\n", str[3]);
+	printf("%s\n", str[4]);
+	printf("%s\n", str[5]);
 }
