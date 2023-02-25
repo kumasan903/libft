@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:47:14 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/25 07:57:08 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/25 08:02:54 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	front = check_front(s1, set);
 	back = check_back(s1, set);
-	result = ft_calloc(ft_strlen(s1) - front - back + 1);
+	result = malloc(ft_strlen(s1) - front - back + 1);
 	i = front;
 	j = 0;
 	while (i < ft_strlen(s1) - back)
@@ -89,5 +89,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 		j++;
 	}
+	result[j] = 0;
 	return (result);
 }
