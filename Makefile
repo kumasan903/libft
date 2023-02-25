@@ -6,7 +6,6 @@ CFLAGS	= -Wall -Wextra -Werror
 
 $(NAME)	:	$(OBJS)
 	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
 
 clean	:
 	$(RM) $(OBJS)
