@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:47:14 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/25 08:59:19 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:18:55 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		front;
 	int		back;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	front = check_front(s1, set);
 	if ((size_t)front == ft_strlen(s1))
 		return (ft_calloc(1, sizeof(char)));
