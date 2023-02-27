@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:52 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/27 15:32:17 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/27 15:57:48 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ char	*ft_itoa(int n);
 void	ft_putnbr_fd(int n, int fd);
 char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif
