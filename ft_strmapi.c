@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 15:11:17 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/27 15:29:51 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/27 15:38:30 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*new_string;
 	int		i;
 
+	if (s == NULL || f == NULL)
+		return (NULL);
 	new_string = ft_calloc(sizeof(char *), ft_strlen(s) + 1);
 	if (new_string == NULL)
 		return (NULL);
