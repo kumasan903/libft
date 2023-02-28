@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 19:48:12 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/28 09:22:33 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/28 09:31:58 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,10 @@ static void	wrap_malloc_str(char ***result, char **new_s, unsigned int *count, c
 	offset = 0;
 	while (i < *count + 1)
 	{
-		offset += malloc_str(*new_s + offset, *c, *result[i]);
-		if (*result[i] == NULL)
-			*result[0] = NULL;
-		while (*new_s[offset] == *c)
+		offset += malloc_str(*new_s + offset, *c, result[i]);
+		if ((*result)[i] == NULL)
+			(*result)[0] = NULL;
+		while ((*new_s)[offset] == *c)
 			offset++;
 		i++;
 	}
