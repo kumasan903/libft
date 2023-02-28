@@ -32,7 +32,18 @@ static unsigned int	count_char(char const *s, char c)
 	return (count);
 }
 
-size_t	malloc_str(char const *s, char c, char **dest)
+static void	all_free(char ****result, int i)
+{
+	while (i >= 0)
+	{
+		free((*result)[i]);
+		i--;
+	}
+	free(*result);
+	*result = NULL;
+}
+
+static size_t	malloc_str(char const *s, char c, char **dest)
 {
 	char	*str;
 	size_t	str_len;
@@ -68,7 +79,10 @@ static void
 	{
 		offset += malloc_str(*new_s + offset, *c, &(*result)[i]);
 		if ((*result)[i] == NULL)
-			(*result)[0] = NULL;
+		{
+			all_free(&result, i);
+			return ;
+		}
 		while ((*new_s)[offset] == *c)
 			offset++;
 		i++;
@@ -90,7 +104,8 @@ char	**ft_split(char const *s, char c)
 	result = malloc(sizeof(char *) * (count + 2));
 	if (result == NULL)
 		return (NULL);
-	wrap_malloc_str(&result, &new_s, &count, &c);
 	result[count + 1] = NULL;
+	wrap_malloc_str(&result, &new_s, &count, &c);
+	free(new_s);
 	return (result);
 }
