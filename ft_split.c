@@ -96,6 +96,8 @@ char	**ft_split(char const *s, char c)
 	char			*new_s;
 	char			new_c[2];
 
+	if (s[0] == '\0')
+		return (NULL);
 	ft_strlcpy(new_c, &c, 2);
 	new_s = ft_strtrim(s, new_c);
 	if (new_s == NULL)
