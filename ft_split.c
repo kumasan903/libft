@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 19:48:12 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/28 09:47:43 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/28 13:05:15 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ size_t	malloc_str(char const *s, char c, char **dest)
 	return (str_len);
 }
 
-static void	wrap_malloc_str(char ***result, char **new_s, unsigned int *count, char *c)
+static void
+	wrap_malloc_str(char ***result, char **new_s, unsigned int *count, char *c)
 {
 	unsigned int	i;
 	unsigned int	offset;
