@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 19:48:12 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/26 13:30:12 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/28 09:13:58 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,28 @@ size_t	malloc_str(char const *s, char c, char **dest)
 	return (str_len);
 }
 
+static void	wrap_malloc_str(char ***result, char **new_s, unsigned int *count, char *c)
+{
+	unsigned int	i;
+	unsigned int	offset;
+
+	i = 0;
+	offset = 0;
+	while (i < *count + 1)
+	{
+		offset += malloc_str(*new_s + offset, *c, result[i]);
+		if (*result[i] == NULL)
+			*result[0] = NULL;
+		while (*new_s[offset] == *c)
+			offset++;
+		i++;
+	}
+}
+
 char	**ft_split(char const *s, char c)
 {
 	unsigned int	count;
 	char			**result;
-	unsigned int	offset;
-	unsigned int	i;
 	char			*new_s;
 
 	new_s = ft_strtrim(s, &c);
@@ -73,17 +89,7 @@ char	**ft_split(char const *s, char c)
 	result = malloc(sizeof(char *) * (count + 2));
 	if (result == NULL)
 		return (NULL);
-	i = 0;
-	offset = 0;
-	while (i < count + 1)
-	{
-		offset += malloc_str(new_s + offset, c, &result[i]);
-		if (result[i] == NULL)
-			result[0] = NULL;
-		while (new_s[offset] == c)
-			offset++;
-		i++;
-	}
+	wrap_malloc_str(&result, &new_s, &count, &c);
 	result[count + 1] = NULL;
 	return (result);
 }
