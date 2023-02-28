@@ -94,8 +94,10 @@ char	**ft_split(char const *s, char c)
 	unsigned int	count;
 	char			**result;
 	char			*new_s;
+	char			new_c[2];
 
-	new_s = ft_strtrim(s, &c);
+	ft_strlcpy(new_c, &c, 2);
+	new_s = ft_strtrim(s, new_c);
 	if (new_s == NULL)
 		return (NULL);
 	count = count_char(new_s, c);
