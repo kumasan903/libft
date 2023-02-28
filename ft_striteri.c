@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 15:51:39 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/27 15:54:59 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/02/28 09:52:03 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
+	if (s == NULL || f == NULL)
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{
