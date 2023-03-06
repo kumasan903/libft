@@ -17,21 +17,10 @@ $(NAME)	:	$(OBJS)
 
 clean	:
 	$(RM) $(OBJS)
-	$(RM) main.o
 
 fclean	:	clean
 	$(RM) $(NAME)
-	$(RM) a.out
 
 re		:	fclean all
 
 all		:	$(NAME)
-
-test	:	$(OBJS) main.o
-	$(CC) $(CFLAGS) $(OBJS) main.o -o a.out
-
-run		:	test
-	./a.out
-	@$(RM) $(OBJS)
-	@$(RM) $(NAME)
-	@$(RM) main.o a.out
