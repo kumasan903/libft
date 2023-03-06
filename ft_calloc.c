@@ -12,24 +12,22 @@
 
 #include "libft.h"
 
-void	*ft_calloc(size_t number, size_t size)
-{
-	size_t	sum;
-	void	*ptr;
-	size_t	bytes;
+void *ft_calloc(size_t count, size_t size) {
+  size_t sum;
+  void *ptr;
+  size_t bytes;
 
-	if (number == 0 || size == 0)
-	{
-		number = 1;
-		size = 1;
-	}
-	bytes = number * size;
-	if (bytes / size != number)
-		return (NULL);
-	sum = number * size;
-	ptr = malloc(sum);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, sum);
-	return (ptr);
+  if (count == 0 || size == 0) {
+    count = 1;
+    size = 1;
+  }
+  bytes = count * size;
+  if (bytes / size != count)
+    return (NULL);
+  sum = count * size;
+  ptr = malloc(sum);
+  if (ptr == NULL)
+    return (NULL);
+  ft_bzero(ptr, sum);
+  return (ptr);
 }
