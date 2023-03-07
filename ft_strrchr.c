@@ -31,8 +31,5 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (str[i] == chr)
 		return ((char *)&s[i]);
-	if (return_value == NULL)
-		return (NULL);
-	else
-		return ((char *)return_value);
+	return ((char *)return_value);
 }
