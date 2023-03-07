@@ -51,7 +51,7 @@ static size_t	malloc_str(char const *s, char c, char **dest)
 
 	i = 0;
 	str_len = 0;
-	while (s[i] && s[i] != c)
+	while (s[i] != '\0' && s[i] != c)
 	{
 		str_len++;
 		i++;
