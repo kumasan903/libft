@@ -14,7 +14,7 @@
 
 static size_t	count_num_len(unsigned int nb)
 {
-	int	count;
+	size_t	count;
 
 	if (nb == 0)
 	{
@@ -51,13 +51,13 @@ static void	ft_putuint_fd(unsigned int nb, int fd)
 	size_t			i;
 	char			c;
 
-	nb_len = count_num_len(nb);
-	divisor = calc_divisor(nb_len);
+	nb_len = count_num_len (nb);
+	divisor = calc_divisor (nb_len);
 	i = 0;
 	while (i < nb_len)
 	{
 		c = (nb / divisor) % 10 + '0';
-		write(fd, &c, 1);
+		write (fd, &c, 1);
 		divisor /= 10;
 		i++;
 	}
@@ -69,12 +69,12 @@ void	ft_putnbr_fd(int n, int fd)
 
 	if (n < 0)
 	{
-		write(fd, "-", 1);
+		write (fd, "-", 1);
 		nb = n * -1;
 	}
 	else
 	{
 		nb = n;
 	}
-	ft_putuint_fd(nb, fd);
+	ft_putuint_fd (nb, fd);
 }

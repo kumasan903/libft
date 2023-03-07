@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	count_num_len(long n)
+static size_t	count_num_len(long n)
 {
 	size_t	n_len;
 
@@ -50,7 +50,7 @@ char	*ft_itoa(int n)
 	}
 	if (long_n == 0)
 		str[0] = '0';
-	while (long_n)
+	while (long_n != 0)
 	{
 		str[n_len - 1] = long_n % 10 + '0';
 		long_n /= 10;

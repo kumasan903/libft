@@ -20,11 +20,11 @@ static int	ft_isspace(int c)
 static void	check_head(int *sign, size_t *i, const char *str)
 {
 	while (ft_isspace(str[*i]))
-		*i += 1;
+		(*i)++;
 	if (str[*i] == '-')
 		*sign *= -1;
 	if (str[*i] == '-' || str[*i] == '+')
-		*i += 1;
+		(*i)++;
 }
 
 int	ft_atoi(const char *str)

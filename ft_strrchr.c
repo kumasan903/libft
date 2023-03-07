@@ -22,8 +22,8 @@ char	*ft_strrchr(const char *s, int c)
 	str = (unsigned char *)s;
 	chr = (unsigned char)c;
 	i = 0;
-	return_value = 0;
-	while (str[i])
+	return_value = NULL;
+	while (str[i] != '\0')
 	{
 		if (str[i] == chr)
 			return_value = (unsigned char *)&s[i];
@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (str[i] == chr)
 		return ((char *)&s[i]);
-	if (return_value == 0)
+	if (return_value == NULL)
 		return (NULL);
 	else
 		return ((char *)return_value);

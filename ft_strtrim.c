@@ -12,20 +12,20 @@
 
 #include "libft.h"
 
-static int	check_front(char const *s1, char const *set)
+static size_t	check_front(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
-	int	front;
-	int	tmp;
+	size_t	i;
+	size_t	j;
+	size_t	front;
+	size_t	tmp;
 
 	front = 0;
 	i = 0;
-	while (s1[i])
+	while (s1[i] != '\0')
 	{
 		j = 0;
 		tmp = front;
-		while (set[j])
+		while (set[j] != '\0')
 		{
 			if (s1[i] == set[j])
 			{
@@ -41,20 +41,20 @@ static int	check_front(char const *s1, char const *set)
 	return (front);
 }
 
-static int	check_back(char const *s1, char const *set)
+static size_t	check_back(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
-	int	back;
-	int	tmp;
+	int		i;
+	size_t	j;
+	size_t	back;
+	size_t	tmp;
 
 	back = 0;
-	i = ft_strlen(s1) - 1;
+	i = ft_strlen (s1) - 1;
 	while (i >= 0)
 	{
 		tmp = back;
 		j = 0;
-		while (set[j])
+		while (set[j] != '\0')
 		{
 			if (s1[i] == set[j])
 			{
@@ -75,21 +75,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*result;
 	size_t	i;
 	size_t	j;
-	int		front;
-	int		back;
+	size_t	front;
+	size_t	back;
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	front = check_front(s1, set);
-	if ((size_t)front == ft_strlen(s1))
-		return (ft_calloc(1, sizeof(char)));
-	back = check_back(s1, set);
-	result = ft_calloc(sizeof(char), ft_strlen(s1) - front - back + 1);
+	front = check_front (s1, set);
+	if (front == ft_strlen (s1))
+		return (ft_calloc (1, sizeof(char)));
+	back = check_back (s1, set);
+	result = ft_calloc (sizeof(char), ft_strlen(s1) - front - back + 1);
 	if (result == NULL)
 		return (NULL);
 	i = front;
 	j = 0;
-	while (i < ft_strlen(s1) - back)
+	while (i < ft_strlen (s1) - back)
 	{
 		result[j] = s1[i];
 		i++;
