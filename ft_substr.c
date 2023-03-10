@@ -27,14 +27,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (ft_strlen (s) < start)
 		return ((char *)ft_calloc (1, sizeof(char)));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);	
 	dst_i = 0;
 	src_i = start;
-	while (dst_i < len && s[src_i] != '\0')
-	{
-		dest[dst_i] = s[src_i];
-		dst_i++;
-		src_i++;
-	}
-	dest[dst_i] = 0;
+	ft_strlcpy(dest, &s[src_i], len);
 	return (dest);
 }
