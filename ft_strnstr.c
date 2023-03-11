@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 05:29:34 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/27 18:04:11 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/03/11 11:34:15 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		j = 0;
 		if (haystack[i] == needle[j])
 		{
-			while (haystack[i + j] != '\0' && i + j < len && haystack[i + j] == needle[j])
+			while (haystack[i + j] != '\0' && i + j < len \
+				&& haystack[i + j] == needle[j])
 			{
 				j++;
 				if (needle[j] == '\0')

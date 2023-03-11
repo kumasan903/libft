@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 07:09:43 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/27 18:16:23 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/03/11 11:30:29 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (dest == NULL)
 		return (NULL);
 	if (len > ft_strlen(s + start))
-		len = ft_strlen(s + start);	
+		len = ft_strlen(s + start);
 	dst_i = 0;
 	src_i = start;
 	ft_strlcpy(dest, &s[src_i], len);

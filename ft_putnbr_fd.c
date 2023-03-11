@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 07:32:21 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/21 19:26:56 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/03/11 11:32:45 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		write (fd, "-", 1);
 		nb = n * -1;
-		nb = (unsigned int)(n + 1) * -1 + 1;
+		nb = ((unsigned int)(n + 1) *-1) + 1;
 	}
 	else
 	{
