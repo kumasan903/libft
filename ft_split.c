@@ -91,16 +91,17 @@ static void
 
 char	**ft_split(char const *s, char c)
 {
-	unsigned int	count;
-	char			**result;
-	char			*new_s;
-	char			new_c[2];
+	size_t	count;
+	char	**result;
+	char	*new_s;
+	char	new_c[2];
 
 	if (s == NULL)
-		return (ft_calloc(sizeof(char *), 1));
+		return (NULL);
 	if (s[0] == '\0')
 		return (ft_calloc(sizeof(char *), 1));
-	ft_strlcpy(new_c, &c, 2);
+	new_c[0] = c;
+	new_c[1] = '\0';
 	new_s = ft_strtrim(s, new_c);
 	if (new_s == NULL)
 		return (NULL);
