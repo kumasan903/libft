@@ -68,7 +68,7 @@ static size_t	malloc_str(char const *s, char c, char **dest)
 }
 
 static void
-	wrap_malloc_str(char ***result, char **new_s, unsigned int *count, char *c)
+	wrap_malloc_str(char ***result, char **new_s, size_t *count, char *c)
 {
 	unsigned int	i;
 	unsigned int	offset;
@@ -107,10 +107,16 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	count = count_char (new_s, c);
 	if (count == ft_strlen (new_s))
+	{
+		free(new_s);
 		return (ft_calloc (sizeof(char *), 1));
+	}
 	result = ft_calloc (sizeof(char *), count + 2);
 	if (result == NULL)
+	{
+		free(new_s);
 		return (NULL);
+	}
 	wrap_malloc_str (&result, &new_s, &count, &c);
 	free(new_s);
 	return (result);
