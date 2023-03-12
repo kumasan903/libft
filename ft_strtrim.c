@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 17:47:14 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/27 18:18:55 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/03/12 05:17:12 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static size_t	check_front(char const *s1, char const *set)
 
 static size_t	check_back(char const *s1, char const *set)
 {
-	size_t	i;
+	int		i;
 	size_t	j;
 	size_t	back;
 	size_t	tmp;
