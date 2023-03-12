@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	count_word(char const *s, char c)
+static size_t	count_word(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -30,7 +30,7 @@ size_t	count_word(char const *s, char c)
 	return (count);
 }
 
-size_t	malloc_words2(char const *s, char c, size_t *offset)
+static size_t	count_word_len(char const *s, char c, size_t *offset)
 {
 	size_t	word_len;
 
@@ -43,7 +43,7 @@ size_t	malloc_words2(char const *s, char c, size_t *offset)
 	return (word_len);
 }
 
-int	malloc_words(char **return_vec, size_t word_count, char const *s, char c)
+static int	malloc_words(char **return_vec, size_t word_count, char const *s, char c)
 {
 	size_t	vec_i;
 	size_t	offset;
@@ -61,7 +61,7 @@ int	malloc_words(char **return_vec, size_t word_count, char const *s, char c)
 			offset++;
 			start++;
 		}
-		word_len = malloc_words2(s, c, &offset);
+		word_len = count_word_len(s, c, &offset);
 		return_vec[vec_i] = malloc(sizeof(char) * (word_len + 1));
 		if (return_vec[vec_i] == NULL)
 			return (1);
@@ -71,7 +71,7 @@ int	malloc_words(char **return_vec, size_t word_count, char const *s, char c)
 	return (0);
 }
 
-void	*free_and_return_null(char **return_vec)
+static void	*free_and_return_null(char **return_vec)
 {
 	size_t	i;
 
