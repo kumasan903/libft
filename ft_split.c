@@ -32,7 +32,7 @@ static unsigned int	count_char(char const *s, char c)
 	return (count);
 }
 
-static void	all_free(char ****result, int i)
+static void	all_free(char ****result, unsigned int i)
 {
 	while (i >= 0)
 	{
