@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 11:35:36 by skawanis          #+#    #+#             */
-/*   Updated: 2023/02/28 13:20:07 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/03/12 05:15:09 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
+	int	i;
 
 	if (len == 0)
 		return (dst);
