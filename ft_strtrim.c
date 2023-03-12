@@ -43,7 +43,7 @@ static size_t	check_front(char const *s1, char const *set)
 
 static size_t	check_back(char const *s1, char const *set)
 {
-	int		i;
+	size_t	i;
 	size_t	j;
 	size_t	back;
 	size_t	tmp;
