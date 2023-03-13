@@ -29,6 +29,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
 	src_i = start;
-	ft_strlcpy(dest, &s[src_i], len);
+	ft_strlcpy(dest, &s[src_i], len + 1);
 	return (dest);
 }
