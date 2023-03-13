@@ -80,16 +80,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	front = check_front (s1, set);
-	if (front == ft_strlen (s1))
-		return (ft_calloc (1, sizeof(char)));
-	back = check_back (s1, set);
-	result = ft_calloc (sizeof(char), ft_strlen(s1) - front - back + 1);
+	front = check_front(s1, set);
+	if (front == ft_strlen(s1))
+		return (ft_calloc(1, sizeof(char)));
+	back = check_back(s1, set);
+	result = ft_calloc(sizeof(char), ft_strlen(s1) - front - back + 1);
 	if (result == NULL)
 		return (NULL);
 	i = front;
 	j = 0;
-	while (i < ft_strlen (s1) - back)
+	while (i < ft_strlen(s1) - back)
 	{
 		result[j] = s1[i];
 		i++;

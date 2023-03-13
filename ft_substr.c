@@ -18,14 +18,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	src_i;
 
 	if (len == 0)
-		return ((char *)ft_calloc (1, sizeof(char)));
+		return ((char *)ft_calloc(1, sizeof(char)));
 	if (s == NULL)
 		return (NULL);
-	if (ft_strlen (s) < start)
-		return ((char *)ft_calloc (1, sizeof(char)));
+	if (ft_strlen(s) < start)
+		return ((char *)ft_calloc(1, sizeof(char)));
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
-	dest = ft_calloc (len + 1, sizeof(char));
+	dest = ft_calloc(len + 1, sizeof(char));
 	if (dest == NULL)
 		return (NULL);
 	src_i = start;
