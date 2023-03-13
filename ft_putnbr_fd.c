@@ -70,7 +70,6 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n < 0)
 	{
 		write (fd, "-", 1);
-		nb = n * -1;
 		nb = ((unsigned int)(n + 1) *-1) + 1;
 	}
 	else
