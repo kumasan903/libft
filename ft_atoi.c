@@ -29,27 +29,27 @@ static void	check_head(int *sign, size_t *i, const char *str)
 
 int	ft_atoi(const char *str)
 {
-	size_t	i;
-	int		sign;
-	long	num;
-	long	tmp;
+	size_t		i;
+	int			sign;
+	long		num;
+	const long	long_max_divided = LONG_MAX / 10;
+	const long	long_max_remainder = LONG_MAX % 10;
 
 	i = 0;
 	sign = 1;
 	num = 0;
 	check_head(&sign, &i, str);
-	tmp = str[i] - '0';
 	while (ft_isdigit(str[i]))
 	{
-		num *= 10;
-		num += str[i] - '0';
-		if (num < tmp)
+		if (num > (long_max_divided) \
+		|| (num == long_max_divided && (str[i] - '0') > (long_max_remainder)))
 		{
 			if (sign == -1)
 				return ((int)LONG_MIN);
 			return ((int)LONG_MAX);
 		}
-		tmp = num;
+		num *= 10;
+		num += str[i] - '0';
 		i++;
 	}
 	return ((int)(num * sign));
