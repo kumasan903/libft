@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 06:52:02 by skawanis          #+#    #+#             */
-/*   Updated: 2023/03/12 09:00:55 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/03/13 12:12:38 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ static size_t	count_word_len(char const *s, char c, size_t *offset)
 	return (word_len);
 }
 
-static int	malloc_words(char **return_vec, size_t word_count, char const *s, char c)
+static int
+	malloc_words(char **return_vec, size_t word_count, char const *s, char c)
 {
 	size_t	vec_i;
 	size_t	offset;
