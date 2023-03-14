@@ -11,7 +11,7 @@ ft_putnbr_fd.c
 OBJS	= $(SRCS:.c=.o)
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
-ARFLAGS = rc
+ARFLAGS = rcs
 
 all		:	$(NAME)
 
@@ -26,4 +26,4 @@ fclean	:	clean
 
 re		:	fclean all
 
-.PHONY	:	$(NAME) clean fclean re all
+.PHONY	:	clean fclean re all
