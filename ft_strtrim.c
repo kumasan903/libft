@@ -40,18 +40,20 @@ static size_t	check_front(char const *s1, char const *set)
 	}
 	return (front);
 }
+//strchr set s1?
 
 static size_t	check_back(char const *s1, char const *set)
 {
-	int		i;
+	size_t	i;
 	size_t	j;
 	size_t	back;
 	size_t	tmp;
 
 	back = 0;
-	i = ft_strlen (s1) - 1;
-	while (i >= 0)
+	i = ft_strlen (s1);
+	while (i > 0)
 	{
+		i--;
 		tmp = back;
 		j = 0;
 		while (set[j] != '\0')
@@ -65,10 +67,12 @@ static size_t	check_back(char const *s1, char const *set)
 		}
 		if (back == tmp)
 			break ;
-		i--;
 	}
 	return (back);
 }
+
+//strchrを使って書き直せば5行くらいの関数になる(check front check back)?
+//callocとかmallocをコードに複数書くのは良くないので、どんな入力が来ても処理できるコードにするほうが望ましい
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -81,7 +85,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	front = check_front(s1, set);
-	if (front == ft_strlen(s1))
+	if (front == ft_strlen(s1)) // これもうまいことやればいらなそう？
 		return (ft_calloc(1, sizeof(char)));
 	back = check_back(s1, set);
 	result = ft_calloc(sizeof(char), ft_strlen(s1) - front - back + 1);
@@ -89,6 +93,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	i = front;
 	j = 0;
+	// 一つのwhileで複数の変数をなんとかする癖をやめよう
+	// memcpyを使える
 	while (i < ft_strlen(s1) - back)
 	{
 		result[j] = s1[i];
