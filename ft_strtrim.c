@@ -77,29 +77,20 @@ static size_t	check_back(char const *s1, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*result;
-	size_t	i;
-	size_t	j;
 	size_t	front;
 	size_t	back;
+	size_t	s1_len;
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	front = check_front(s1, set);
-	if (front == ft_strlen(s1)) // これもうまいことやればいらなそう？
+	s1_len = ft_strlen(s1);
+	if (front == s1_len) // これもうまいことやればいらなそう？
 		return (ft_calloc(1, sizeof(char)));
 	back = check_back(s1, set);
-	result = ft_calloc(sizeof(char), ft_strlen(s1) - front - back + 1);
+	result = ft_calloc(sizeof(char), s1_len - front - back + 1);
 	if (result == NULL)
 		return (NULL);
-	i = front;
-	j = 0;
-	// 一つのwhileで複数の変数をなんとかする癖をやめよう
-	// memcpyを使える
-	while (i < ft_strlen(s1) - back)
-	{
-		result[j] = s1[i];
-		i++;
-		j++;
-	}
+	ft_memcpy(result, &s1[front], s1_len - back);
 	return (result);
 }
