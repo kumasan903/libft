@@ -17,10 +17,10 @@ char	*ft_strdup(const char *s1)
 	size_t	len;
 	char	*dest;
 
-	len = ft_strlen(s1) + 1;
-	dest = ft_calloc(sizeof(char), len);
+	len = ft_strlen(s1);
+	dest = ft_calloc(sizeof(char), len + 1);
 	if (dest == NULL)
 		return (NULL);
-	ft_memcpy(dest, s1, len);
+	ft_memcpy(dest, s1, len + 1);
 	return (dest);
 }
