@@ -14,20 +14,17 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t			i;
-	unsigned char	*str;
-	unsigned char	chr;
+	size_t		i;
+	const char	chr = (char)c;
 
-	str = (unsigned char *)s;
-	chr = (unsigned char)c;
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
-		if (str[i] == chr)
+		if (s[i] == chr)
 			return ((char *)&s[i]);
 		i++;
 	}
-	if (str[i] == chr)
+	if (s[i] == chr)
 	{
 		return ((char *)&s[i]);
 	}
