@@ -91,6 +91,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	result = ft_calloc(sizeof(char), s1_len - front - back + 1);
 	if (result == NULL)
 		return (NULL);
-	ft_memcpy(result, &s1[front], s1_len - back);
+	ft_memcpy(result, &s1[front], (s1_len - back) - front);
 	return (result);
 }
