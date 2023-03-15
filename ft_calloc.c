@@ -16,17 +16,18 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	size_t	sum;
 	void	*ptr;
-	size_t	bytes;
 
 	if (count == 0 || size == 0)
 	{
 		count = 1;
 		size = 1;
-	}
-	bytes = count * size;
-	if (bytes / size != count)
-		return (NULL);
+	} 
 	sum = count * size;
+	if (sum / size != count)
+	{
+		return (NULL);
+		errno = 12;
+	}
 	ptr = malloc(sum);
 	if (ptr == NULL)
 		return (NULL);
