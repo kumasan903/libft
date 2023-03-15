@@ -25,9 +25,9 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (s[i] == chr)
 			return_value = (char *)&s[i];
-		i++;
 		if (s[i] == '\0')
 			break;
+		i++;
 	}
 	return (return_value);
 }
