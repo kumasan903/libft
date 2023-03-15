@@ -40,7 +40,6 @@ static size_t	check_front(char const *s1, char const *set)
 	}
 	return (front);
 }
-//strchr set s1?
 
 static size_t	check_back(char const *s1, char const *set)
 {
@@ -71,9 +70,6 @@ static size_t	check_back(char const *s1, char const *set)
 	return (back);
 }
 
-//strchrを使って書き直せば5行くらいの関数になる(check front check back)?
-//callocとかmallocをコードに複数書くのは良くないので、どんな入力が来ても処理できるコードにするほうが望ましい
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*result;
@@ -85,7 +81,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	front = check_front(s1, set);
 	s1_len = ft_strlen(s1);
-	if (front == s1_len) // これもうまいことやればいらなそう？
+	if (front == s1_len)
 		return (ft_calloc(1, sizeof(char)));
 	back = check_back(s1, set);
 	result = ft_calloc(sizeof(char), s1_len - front - back + 1);
