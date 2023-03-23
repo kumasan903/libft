@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 09:26:20 by skawanis          #+#    #+#             */
-/*   Updated: 2023/03/23 18:50:17 by skawanis         ###   ########.fr       */
+/*   Created: 2023/03/23 18:49:34 by skawanis          #+#    #+#             */
+/*   Updated: 2023/03/23 18:49:53 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_islower(int c)
 {
-	if (ft_isupper(c) || ft_islower(c))
+	if ('a' <= c && c <= 'z')
 		return (1);
 	else
 		return (0);
