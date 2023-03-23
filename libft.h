@@ -53,4 +53,5 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 size_t	ft_strlen_s(const char *s);
+void	ft_putuint_fd(unsigned int nb, int fd);
 #endif
