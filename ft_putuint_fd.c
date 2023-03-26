@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 18:38:52 by skawanis          #+#    #+#             */
-/*   Updated: 2023/03/23 18:40:09 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/03/26 00:25:37 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static unsigned int	calc_divisor(size_t num_len)
 	return (divisor);
 }
 
-void	ft_putuint_fd(unsigned int nb, int fd)
+ssize_t	ft_putuint_fd(unsigned int nb, int fd)
 {
 	size_t			nb_len;
 	unsigned int	divisor;
@@ -61,4 +61,5 @@ void	ft_putuint_fd(unsigned int nb, int fd)
 		divisor /= 10;
 		i++;
 	}
+	return (i);
 }
