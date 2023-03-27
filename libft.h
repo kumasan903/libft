@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 05:28:52 by skawanis          #+#    #+#             */
-/*   Updated: 2023/03/27 20:34:13 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/03/27 22:23:31 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,6 @@ size_t	ft_strlen_s(const char *s);
 ssize_t	ft_putuint_fd(unsigned int nb, int fd);
 int		ft_islower(int c);
 int		ft_isupper(int c);
-ssize_t	ft_putlowerhex_fd(size_t n, int fd);
-ssize_t	ft_putupperhex_fd(size_t n, int fd);
+ssize_t	ft_putlowerhex_fd(unsigned int n, int fd);
+ssize_t	ft_putupperhex_fd(unsigned int n, int fd);
 #endif
