@@ -57,4 +57,5 @@ ssize_t	ft_putuint_fd(unsigned int nb, int fd);
 int		ft_islower(int c);
 int		ft_isupper(int c);
 ssize_t	ft_putlowerhex_fd(size_t n, int fd);
+ssize_t	ft_putupperhex_fd(size_t n, int fd);
 #endif
