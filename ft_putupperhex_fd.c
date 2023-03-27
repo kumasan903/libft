@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static void	rec(unsigned int n, int fd, size_t *count)
+static void	rec(size_t n, int fd, size_t *count)
 {
 	if (n > 15)
 	{
@@ -21,7 +21,7 @@ static void	rec(unsigned int n, int fd, size_t *count)
 	*count += write(fd, &"0123456789ABCDEF"[n % 16], 1);
 }
 
-ssize_t	ft_putupperhex_fd(unsigned int n, int fd)
+ssize_t	ft_putupperhex_fd(size_t n, int fd)
 {
 	size_t	count;
 
