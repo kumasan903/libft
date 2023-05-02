@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 11:35:20 by skawanis          #+#    #+#             */
-/*   Updated: 2023/01/10 11:35:23 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/05/02 12:31:05 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,13 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		s[i] = 0x0;
+		i++;
+	}
+	return (s);
 }
