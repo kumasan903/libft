@@ -6,7 +6,7 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 18:38:52 by skawanis          #+#    #+#             */
-/*   Updated: 2023/03/26 00:25:37 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/05/13 22:56:36 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ ssize_t	ft_putuint_fd(unsigned int nb, int fd)
 	unsigned int	divisor;
 	size_t			i;
 	char			c;
+	ssize_t			write_return;
 
 	nb_len = count_num_len(nb);
 	divisor = calc_divisor(nb_len);
@@ -57,7 +58,9 @@ ssize_t	ft_putuint_fd(unsigned int nb, int fd)
 	while (i < nb_len)
 	{
 		c = (nb / divisor) % 10 + '0';
-		write (fd, &c, 1);
+		write_return = write (fd, &c, 1);
+		if (write_return < 0)
+			return (-1);
 		divisor /= 10;
 		i++;
 	}
