@@ -9,7 +9,8 @@ ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
 ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_strlen_s.c ft_putuint_fd.c ft_isupper.c ft_islower.c ft_putlowerhex_fd.c \
-ft_putupperhex_fd.c ft_strcdup.c ft_strclen_s.c
+ft_putupperhex_fd.c ft_strcdup.c ft_strclen_s.c \
+ft_min.c ft_max.c
 OBJS	= $(SRCS:.c=.o)
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
