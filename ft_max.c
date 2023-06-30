@@ -6,11 +6,11 @@
 /*   By: skawanis <skawanis@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 16:04:07 by skawanis          #+#    #+#             */
-/*   Updated: 2023/06/16 16:04:08 by skawanis         ###   ########.fr       */
+/*   Updated: 2023/07/01 02:45:07 by skawanis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_max(int a, int b)
+int	ft_max(int a, int b)
 {
 	if (a > b)
 		return (a);
